@@ -69,7 +69,7 @@ main {
       &-new-category {
         background-color: var(--dark-blue-clr);
         padding: rem(20) rem(16);
-        h3 {
+        h2 {
           color: var(--soft-orange-clr);
           font-size: rem(30);
           margin-bottom: rem(20);
@@ -80,7 +80,7 @@ main {
             &:not(:last-child) {
               border-bottom: 1px solid var(--dark-grayish-blue-clr);
             }
-            h4 {
+            h3 {
               color: var(--off-white-clr);
               font-size: rem(20);
               transition: 0.3s ease;
