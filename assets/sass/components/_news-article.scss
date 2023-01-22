@@ -33,12 +33,12 @@ main {
             font-size: rem(40);
             font-weight: var(--fw-800);
             @include breakpoint-up(md) {
-              flex: 1 0 rem(200);
+              flex: 1 0 rem(130);
             }
           }
           .details-wrapper {
             @include breakpoint-up(md) {
-              flex: 1 1 rem(300);
+              flex: 1 1 rem(350);
             }
             p {
               color: var(--dark-grayish-blue-clr);
@@ -69,7 +69,7 @@ main {
       &-new-category {
         background-color: var(--dark-blue-clr);
         padding: rem(20) rem(16);
-        h4 {
+        h3 {
           color: var(--soft-orange-clr);
           font-size: rem(30);
           margin-bottom: rem(20);
@@ -80,8 +80,9 @@ main {
             &:not(:last-child) {
               border-bottom: 1px solid var(--dark-grayish-blue-clr);
             }
-            h3 {
+            h4 {
               color: var(--off-white-clr);
+              font-size: rem(20);
               transition: 0.3s ease;
               cursor: pointer;
               &:hover {
@@ -96,7 +97,7 @@ main {
         }
       }
       @include breakpoint-up(md) {
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 3fr 1fr;
       };
     }
   }
