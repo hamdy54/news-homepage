@@ -1,0 +1,59 @@
+@use "./colors" as *;
+@use "./fonts" as *;
+
+:root {
+  --soft-orange-clr: #{$soft-orange-clr};
+
+  --soft-red-clr: #{$soft-red-clr};
+  --off-white-clr: #{$off-white-clr};
+
+  --grayish-blue-clr: #{$grayish-blue-clr};
+  --dark-grayish-blue-clr: #{$dark-grayish-blue-clr};
+  --dark-blue-clr: #{$dark-blue-clr};
+
+  /* Typography */
+  --font-inter: #{$font-inter};
+
+  --fs: #{$font-size};
+
+  --fw-400: #{$fw-400};
+  --fw-700: #{$fw-700};
+  --fw-800: #{$fw-800};
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input,
+button,
+textarea {
+  outline: none;
+}
+
+p {
+  line-height: 1.5;
+}
+
+body {
+  font-size: var(--fs);
+  font-family: var(--font-inter);
+  background-color: #fff;
+
+  &.menuIsActive {
+    &:before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: var(--dark-grayish-blue-clr);
+      opacity: 0.8;
+      z-index: 5;
+    }
+  }
+}

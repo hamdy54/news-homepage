@@ -1,0 +1,93 @@
+@use "./../util" as *;
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - rem(140));
+  section {
+    .news__article {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: rem(16);
+      &-landing {
+        .img__wrapper {
+          width: 100%;
+          height: rem(300);
+          margin-bottom: rem(20);
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            @include breakpoint-up(md) {
+              content: url("./../images/image-web-3-desktop.jpg");
+            }
+          }
+        }
+        &-details {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: rem(16);
+          h2 {
+            font-size: rem(40);
+            font-weight: var(--fw-800);
+          }
+          .details-wrapper {
+            p {
+              color: var(--dark-grayish-blue-clr);
+              margin-bottom: rem(20);
+            }
+            .btn {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: rem(180);
+              height: rem(45);
+              background-color: var(--soft-red-clr);
+              color: var(--off-white-clr);
+              letter-spacing: rem(3);
+              text-transform: uppercase;
+              transition: 0.3s ease;
+              &:hover {
+                background-color: var(--dark-blue-clr);
+              }
+            }
+          }
+        }
+      }
+      &-new-category {
+        background-color: var(--dark-blue-clr);
+        padding: rem(20) rem(16);
+        h4 {
+          color: var(--soft-orange-clr);
+          font-size: rem(30);
+          margin-bottom: rem(20);
+        }
+        ul {
+          li {
+            padding: rem(16) 0;
+            &:not(:last-child) {
+              border-bottom: 1px solid var(--dark-grayish-blue-clr);
+            }
+            h3 {
+              color: var(--off-white-clr);
+              transition: 0.3s ease;
+              cursor: pointer;
+              &:hover {
+                color: var(--soft-orange-clr);
+              }
+            }
+            p {
+              margin-top: rem(10);
+              color: var(--grayish-blue-clr);
+            }
+          }
+        }
+      }
+      @include breakpoint-up(md) {
+        grid-template-columns: 2fr 1fr;
+      };
+    }
+  }
+}
