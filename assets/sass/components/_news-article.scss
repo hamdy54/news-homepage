@@ -29,7 +29,7 @@ main {
           flex-direction: column;
           justify-content: center;
           gap: rem(16);
-          h2 {
+          h1 {
             font-size: rem(40);
             font-weight: var(--fw-800);
             @include breakpoint-up(md) {
